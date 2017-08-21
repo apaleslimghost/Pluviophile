@@ -1,0 +1,27 @@
+{
+  "name": "Pluviophile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quarterto/Pluviophile.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quarterto/Pluviophile/issues"
+  },
+  "homepage": "https://github.com/quarterto/Pluviophile#readme",
+  "dependencies": {
+    "menubar": "^5.2.3"
+  },
+  "devDependencies": {
+    "electron-packager": "^8.7.2",
+    "electron-prebuilt": "^1.4.13"
+  }
+}
