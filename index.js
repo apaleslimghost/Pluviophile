@@ -4,12 +4,16 @@ const mb = require('menubar')({
 	dir: __dirname,
 });
 
-mb.on('after-create-window', () => {
-	const contextMenu = Menu.buildFromTemplate([
-		{label: 'Quit', click: () => mb.app.quit()}
-	]);
+const contextMenu = Menu.buildFromTemplate([
+	{label: 'Quit', click: () => mb.app.quit()}
+]);
 
-	mb.tray.on('right-click', () => {
-		mb.tray.popUpContextMenu(contextMenu);
-	})
+mb.on('ready', () => {
+	mb.tray.removeAllListeners('click');
+	mb.tray.removeAllListeners('double-click');
+
+	mb.tray.setContextMenu(contextMenu);
+	try {
+		mb.tray.setHighlightMode('selected');
+	} catch(e) {}
 });
