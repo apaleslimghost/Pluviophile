@@ -11,8 +11,8 @@ const contextMenu = Menu.buildFromTemplate([
 mb.on('ready', () => {
 	mb.tray.removeAllListeners('click');
 	mb.tray.removeAllListeners('double-click');
-
 	mb.tray.setContextMenu(contextMenu);
+
 	try {
 		mb.tray.setHighlightMode('selected');
 	} catch(e) {}
